@@ -4,11 +4,9 @@
         <title>My Second View Lab!!</title>
     </head>
     <body>
-      <% time1=Time.new %>
-        <p><%=puts "The date is #{time1}."%></p>
+      <h1>Today</h1>
+      <% require 'date' %>
+      <% today = DateTime.now.strftime("%A, %B %d, %Y") %>
+        <p>The date is <%=today%>." </p>
     </body>
 </html>
-
-Using ERB tags, and the DateTime library, display today's date in a p tag.
-The date should be formatted to look something like this The date is Wednesday, November 18, 2015.
-Create a template called date.erb in views that gets rendered via GET /date. It should contain an h1 with the content Today
